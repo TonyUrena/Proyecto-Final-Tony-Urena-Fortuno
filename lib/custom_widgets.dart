@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class HomeCard extends StatelessWidget {
   String label, imageUrl;
 
-  HomeCard({required this.label, required this.imageUrl});
+  HomeCard({super.key, required this.label, required this.imageUrl});
 
   @override
   Widget build(BuildContext context) {
