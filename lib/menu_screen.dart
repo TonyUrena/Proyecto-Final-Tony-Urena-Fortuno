@@ -76,15 +76,15 @@ class _MenuScreenState extends State<MenuScreen> {
         type: BottomNavigationBarType.fixed,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-              icon: Icon(Icons.home_rounded), label: 'Inicio'),
+              icon: Icon(Icons.home_rounded), label: 'Inicio', activeIcon: Icon(Icons.home_rounded, color: Colors.pinkAccent,)),
           BottomNavigationBarItem(
-              icon: Icon(Icons.card_giftcard_rounded), label: 'Premios'),
+              icon: Icon(Icons.card_giftcard_rounded), label: 'Premios', activeIcon: Icon(Icons.card_giftcard_rounded, color: Colors.deepOrange,)),
           BottomNavigationBarItem(
-              icon: Icon(Icons.shopping_cart_rounded), label: 'Tienda'),
+              icon: Icon(Icons.shopping_cart_rounded), label: 'Tienda', activeIcon: Icon(Icons.shopping_cart_rounded, color: Colors.cyan,)),
           BottomNavigationBarItem(
-              icon: Icon(Icons.discount_rounded), label: 'Ofertas'),
+              icon: Icon(Icons.discount_rounded), label: 'Ofertas', activeIcon: Icon(Icons.discount_rounded, color: Colors.green,)),
           BottomNavigationBarItem(
-              icon: Icon(Icons.location_pin), label: 'Mapa'),
+              icon: Icon(Icons.location_pin), label: 'Mapa', activeIcon: Icon(Icons.location_pin, color: Colors.red,)),
         ],
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
