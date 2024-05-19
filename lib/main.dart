@@ -13,7 +13,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.from(colorScheme: ColorScheme.fromSeed(seedColor: Colors.purpleAccent)),
+      theme: ThemeData(
+        textTheme: TextTheme(
+          titleLarge: TextStyle(fontSize: 30, fontWeight: FontWeight.w900, color: Colors.white),
+          titleMedium: TextStyle(fontSize: 26, fontWeight: FontWeight.w900, color: Colors.white, height: 1.3),
+          titleSmall: TextStyle(fontSize: 23, fontWeight: FontWeight.w300, color: Colors.white),
+          headlineLarge: TextStyle(fontSize: 20, fontWeight: FontWeight.w900, color: Colors.pink.shade400),
+        headlineSmall: TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: Colors.white)),
+      ),
       //Ruta inicial de la aplicación
       initialRoute: '/',
       routes: {

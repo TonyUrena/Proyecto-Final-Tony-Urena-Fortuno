@@ -19,7 +19,6 @@ class HomeCard extends StatelessWidget {
           children: [
             LayoutBuilder(
               builder: (BuildContext context, BoxConstraints constraints) {
-
                 // conseguimos el ancho disponible
                 if (isSquare) {
                   width = constraints.maxWidth;
@@ -36,7 +35,7 @@ class HomeCard extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.all(20),
-              child: Text(label),
+              child: Text(label, style: Theme.of(context).textTheme.headlineLarge,textAlign: TextAlign.center,),
             ),
           ],
         ),
@@ -49,12 +48,12 @@ class AvatarBlock extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 10),
+      padding: EdgeInsets.only(top: 20),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
-          Text("¡Hola <USER>!"),
+          Text("¡Hola Francisco!", style: Theme.of(context).textTheme.titleLarge),
           Column(
             children: [
               //TODO Mantener el avatar fijo al hacer scroll
@@ -63,7 +62,7 @@ class AvatarBlock extends StatelessWidget {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => ProfileScreen()));
                   },
                   child: CircleAvatar(radius: 35, backgroundImage: AssetImage('assets/avatar.png'))),
-              Text("2500")
+              Text("2500", style: Theme.of(context).textTheme.headlineSmall,textAlign: TextAlign.center)
             ],
           ),
         ],
@@ -83,7 +82,15 @@ class DidYouKnowTextBlock extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 45),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [Text("¿Sabías que..."), Text(label)],
+        children: [
+          Text("¿Sabías que...", style: Theme.of(context).textTheme.titleSmall),
+          SizedBox(height: 22),
+          Text(
+            label,
+            style: Theme.of(context).textTheme.titleMedium,
+            textAlign: TextAlign.right,
+          )
+        ],
       ),
     );
   }
