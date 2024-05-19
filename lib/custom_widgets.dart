@@ -10,7 +10,7 @@ class HomeCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 15.0),
+      padding: const EdgeInsets.symmetric(vertical: 8),
       child: Card(
         clipBehavior: Clip.antiAlias,
         child: Column(
@@ -61,6 +61,23 @@ class AvatarBlock extends StatelessWidget {
             ],
           ),
         ],
+      ),
+    );
+  }
+}
+
+class DidYouKnowTextBlock extends StatelessWidget {
+  String label;
+
+  DidYouKnowTextBlock(this.label);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 45),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [Text("¿Sabías que..."), Text(label)],
       ),
     );
   }
