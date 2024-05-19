@@ -48,6 +48,11 @@ class HomeCard extends StatelessWidget {
 }
 
 class AvatarBlock extends StatelessWidget {
+  String label;
+
+
+  AvatarBlock(this.label);
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -56,7 +61,7 @@ class AvatarBlock extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
-          Text("¡Hola Francisco!", style: Theme.of(context).textTheme.titleLarge),
+          Text(label, style: Theme.of(context).textTheme.titleLarge),
           Column(
             children: [
               //TODO Mantener el avatar fijo al hacer scroll

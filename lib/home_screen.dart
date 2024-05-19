@@ -17,7 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          AvatarBlock(),
+          AvatarBlock("¡Hola Francisco!"),
           GestureDetector(
             onTap: () {
               widget.selectTab(2);

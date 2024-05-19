@@ -16,7 +16,7 @@ class _MapScreenState extends State<MapScreen> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        AvatarBlock(),
+        AvatarBlock("¿Dónde estamos?"),
         Expanded(
           child: HomeCard(
             label: "Lista de locales",

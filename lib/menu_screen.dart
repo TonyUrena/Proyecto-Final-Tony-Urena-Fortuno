@@ -21,7 +21,85 @@ class _MenuScreenState extends State<MenuScreen> {
     super.initState();
     _screens = <Widget>[
       HomeScreen(selectTab: _onItemTapped),
-      StoreScreen(productList: [
+      StoreScreen(
+          label:"Tus premios:",
+          productList: [
+        Product(
+          imageUrl: 'assets/product00.jpg',
+          name: 'Miniatura WH40k',
+          buyPrice: 100,
+          isGift: false,
+        ),
+        Product(
+          imageUrl: 'assets/product01.jpg',
+          name: 'Pato de goma',
+          buyPrice: 100,
+          isGift: false,
+        ),
+        Product(
+          imageUrl: 'assets/product02.jpg',
+          name: 'Nevera portátil',
+          buyPrice: 100,
+          isGift: false,
+        ),
+        Product(
+          imageUrl: 'assets/product03.jpg',
+          name: 'Funda isotérmica',
+          buyPrice: 100,
+          isGift: false,
+        ),
+        Product(
+          imageUrl: 'assets/product04.jpg',
+          name: 'Botellas edición limitada',
+          buyPrice: 100,
+          isGift: false,
+        ),
+        Product(
+          imageUrl: 'assets/product05.jpg',
+          name: 'Lata edición limitada',
+          buyPrice: 100,
+          isGift: false,
+        ),
+      ]),
+      StoreScreen(label:"Tu tienda:", productList: [
+        Product(
+          imageUrl: 'assets/product_green.png',
+          name: 'Cococuyá Green',
+          buyPrice: 100,
+          isGift: false,
+        ),
+        Product(
+          imageUrl: 'assets/product_red.png',
+          name: 'Cococuyá Red',
+          buyPrice: 100,
+          isGift: false,
+        ),
+        Product(
+          imageUrl: 'assets/product_black.png',
+          name: 'Cococuyá Black',
+          buyPrice: 100,
+          isGift: false,
+        ),
+        Product(
+          imageUrl: 'assets/product04.jpg',
+          name: 'Botellas edición limitada',
+          buyPrice: 100,
+          isGift: false,
+        ),
+        Product(
+          imageUrl: 'assets/product05.jpg',
+          name: 'Lata edición limitada',
+          buyPrice: 100,
+          isGift: false,
+        ),
+        Product(
+          imageUrl: 'assets/product03.jpg',
+          name: 'Funda isotérmica',
+          buyPrice: 100,
+          isGift: false,
+        ),
+      ]),
+      StoreScreen(label:"Tus ofertas:", productList: [
         Product(
           imageUrl: 'assets/product00.jpg',
           name: 'LABEL',
@@ -29,20 +107,36 @@ class _MenuScreenState extends State<MenuScreen> {
           isGift: false,
         ),
         Product(
-          imageUrl: 'assets/product00.jpg',
+          imageUrl: 'assets/product01.jpg',
           name: 'LABEL',
           buyPrice: 100,
           isGift: false,
         ),
         Product(
-          imageUrl: 'assets/product00.jpg',
+          imageUrl: 'assets/product02.jpg',
+          name: 'LABEL',
+          buyPrice: 100,
+          isGift: false,
+        ),
+        Product(
+          imageUrl: 'assets/product03.jpg',
+          name: 'LABEL',
+          buyPrice: 100,
+          isGift: false,
+        ),
+        Product(
+          imageUrl: 'assets/product04.jpg',
+          name: 'LABEL',
+          buyPrice: 100,
+          isGift: false,
+        ),
+        Product(
+          imageUrl: 'assets/product05.jpg',
           name: 'LABEL',
           buyPrice: 100,
           isGift: false,
         ),
       ]),
-      StoreScreen(productList: []),
-      StoreScreen(productList: []),
       MapScreen(productList: [])
     ];
   }

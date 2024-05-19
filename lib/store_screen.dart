@@ -4,9 +4,10 @@ import 'package:flutter/material.dart';
 import 'custom_widgets.dart';
 
 class StoreScreen extends StatefulWidget {
+  String label;
   List<Product> productList;
 
-  StoreScreen({super.key, required this.productList});
+  StoreScreen({super.key, required this.productList, required this.label});
 
   @override
   State<StatefulWidget> createState() => _StoreScreenState();
@@ -17,7 +18,7 @@ class _StoreScreenState extends State<StoreScreen> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        AvatarBlock(),
+        AvatarBlock(widget. label),
         Expanded(
           child: GridView.count(
             childAspectRatio: 0.75,
