@@ -1,5 +1,6 @@
 import 'package:cococuya_app/menu_screen.dart';
 import 'package:cococuya_app/login_screen.dart';
+import 'package:cococuya_app/profile_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
         //Definición de las rutas de las pantallas
         '/': (context) => const LoginScreen(),
         "/home": (context) => const MenuScreen(),
+        "/profile": (context) => const ProfileScreen(),
       },
     );
   }

@@ -1,3 +1,5 @@
+import 'package:cococuya_app/profile_screen.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HomeCard extends StatelessWidget {
@@ -37,12 +39,10 @@ class HomeCard extends StatelessWidget {
   }
 }
 
-
-
-class AvatarBlock extends StatelessWidget{
+class AvatarBlock extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return          const Padding(
+    return Padding(
       padding: EdgeInsets.symmetric(vertical: 10),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -51,10 +51,12 @@ class AvatarBlock extends StatelessWidget{
           Text("¡Hola <USER>!"),
           Column(
             children: [
-              CircleAvatar(
-                  radius: 35,
-                  backgroundImage: AssetImage('assets/avatar.png')
-              ),
+              //TODO Mantener el avatar fijo al hacer scroll
+              GestureDetector(
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => ProfileScreen()));
+                  },
+                  child: CircleAvatar(radius: 35, backgroundImage: AssetImage('assets/avatar.png'))),
               Text("2500")
             ],
           ),
@@ -62,6 +64,4 @@ class AvatarBlock extends StatelessWidget{
       ),
     );
   }
-
-
 }
