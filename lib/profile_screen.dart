@@ -21,7 +21,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             height: double.infinity,
             width: double.infinity,
           ),
-          const Padding(
+           Padding(
             padding: EdgeInsets.all(15),
             child: Column(
               children: [
@@ -30,8 +30,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   child: Column(
                     children: [
                       CircleAvatar(radius: 55, backgroundImage: AssetImage('assets/avatar.png')),
-                      Text("2500"),
-                      Text("<USER_NAME>"),
+                      Text("2500", style: Theme.of(context).textTheme.titleLarge,),
+                      SizedBox(height: 15,),
+                      Text("Francisco Ramírez Pedregal", style: Theme.of(context).textTheme.headlineMedium, textAlign: TextAlign.center,),
                     ],
                   ),
                 ),
@@ -39,11 +40,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   child: SizedBox(
                     width: double.infinity,
                     child: Card(
-                      child: Column(
-                        children: [
-                          Text("Lista Opciones"),
-                        ],
-                      ),
                     ),
                   ),
                 ),

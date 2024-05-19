@@ -99,43 +99,24 @@ class _MenuScreenState extends State<MenuScreen> {
           isGift: false,
         ),
       ]),
-      StoreScreen(label:"Tus ofertas:", productList: [
+      StoreScreen(label:"Tus ofertas:", productList: [Product(
+        imageUrl: 'assets/product_green.png',
+        name: 'Cococuyá Green',
+        buyPrice: 100,
+        isGift: false,
+      ),
         Product(
-          imageUrl: 'assets/product00.jpg',
-          name: 'LABEL',
+          imageUrl: 'assets/product_red.png',
+          name: 'Cococuyá Red',
           buyPrice: 100,
           isGift: false,
         ),
         Product(
-          imageUrl: 'assets/product01.jpg',
-          name: 'LABEL',
+          imageUrl: 'assets/product_black.png',
+          name: 'Cococuyá Black',
           buyPrice: 100,
           isGift: false,
-        ),
-        Product(
-          imageUrl: 'assets/product02.jpg',
-          name: 'LABEL',
-          buyPrice: 100,
-          isGift: false,
-        ),
-        Product(
-          imageUrl: 'assets/product03.jpg',
-          name: 'LABEL',
-          buyPrice: 100,
-          isGift: false,
-        ),
-        Product(
-          imageUrl: 'assets/product04.jpg',
-          name: 'LABEL',
-          buyPrice: 100,
-          isGift: false,
-        ),
-        Product(
-          imageUrl: 'assets/product05.jpg',
-          name: 'LABEL',
-          buyPrice: 100,
-          isGift: false,
-        ),
+        )
       ]),
       MapScreen(productList: [])
     ];
