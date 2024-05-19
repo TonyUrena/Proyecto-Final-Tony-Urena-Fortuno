@@ -2,7 +2,9 @@ import 'package:cococuya_app/custom_widgets.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+  final Function(int) selectTab;
+
+  const HomeScreen({super.key, required this.selectTab});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -16,36 +18,65 @@ class _HomeScreenState extends State<HomeScreen> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           AvatarBlock(),
-          HomeCard(
-            imageUrl: 'assets/home_cards_img_01.png',
-            label: 'Pide ahora tu caja y llévate un regalo exclusivo',
-            isSquare: false,
-
+          GestureDetector(
+            onTap: () {
+              widget.selectTab(2);
+            },
+            child: HomeCard(
+              imageUrl: 'assets/home_cards_img_01.png',
+              label: 'Pide ahora tu caja y llévate un regalo exclusivo',
+              isSquare: false,
+            ),
           ),
-          HomeCard(
-            imageUrl: 'assets/home_cards_img_02.png',
-            label: '¿Has visto los premios de esta temporada?',
+          GestureDetector(
+            onTap: () {
+              widget.selectTab(1);
+            },
+            child: HomeCard(
+              imageUrl: 'assets/home_cards_img_02.png',
+              label: '¿Has visto los premios de esta temporada?',
+            ),
           ),
           DidYouKnowTextBlock("Cococuyá Black fue elegido anticonceptivo del año 2023 por la revista “Saber Vivir”?"),
-          HomeCard(
-            imageUrl: 'assets/map_placeholder.jpg',
-            label: 'Ya estamos en más de 12.000 establecimientos',
-            isSquare: false,
-            height: 250,
+          GestureDetector(
+            onTap: () {
+              widget.selectTab(4);
+            },
+            child: HomeCard(
+              imageUrl: 'assets/map_placeholder.jpg',
+              label: 'Ya estamos en más de 12.000 establecimientos',
+              isSquare: false,
+              height: 250,
+            ),
           ),
-          HomeCard(
-            imageUrl: 'assets/home_cards_img_04.png',
-            label: 'Ya es Black Friday en Cococuyá',
+          GestureDetector(
+            onTap: () {
+              widget.selectTab(3);
+            },
+            child: HomeCard(
+              imageUrl: 'assets/home_cards_img_04.png',
+              label: 'Ya es Black Friday en Cococuyá',
+            ),
           ),
           DidYouKnowTextBlock("Cococuyá Red contiene  cochinilla 100% free range?"),
-          HomeCard(
-            imageUrl: 'assets/home_cards_img_05.png',
-            label: 'Celebra el fin de curso con Cococuyá y acumula puntos extra',
-            isSquare: false,
+          GestureDetector(
+            onTap: () {
+              widget.selectTab(2);
+            },
+            child: HomeCard(
+              imageUrl: 'assets/home_cards_img_05.png',
+              label: 'Celebra el fin de curso con Cococuyá y acumula puntos extra',
+              isSquare: false,
+            ),
           ),
-          HomeCard(
-            imageUrl: 'assets/home_cards_img_02.png',
-            label: '¿Seguro que has visto los premios de esta temporada?',
+          GestureDetector(
+            onTap: () {
+              widget.selectTab(1);
+            },
+            child: HomeCard(
+              imageUrl: 'assets/home_cards_img_02.png',
+              label: '¿Seguro que has visto los premios de esta temporada?',
+            ),
           ),
           Padding(
               padding: const EdgeInsets.all(80.0),

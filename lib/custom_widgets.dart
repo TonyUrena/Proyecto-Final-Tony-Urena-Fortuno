@@ -24,7 +24,6 @@ class HomeCard extends StatelessWidget {
                   width = constraints.maxWidth;
                   height = constraints.maxWidth;
                 }
-
                 return Image.asset(
                   imageUrl,
                   width: width,
@@ -35,7 +34,11 @@ class HomeCard extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.all(20),
-              child: Text(label, style: Theme.of(context).textTheme.headlineLarge,textAlign: TextAlign.center,),
+              child: Text(
+                label,
+                style: Theme.of(context).textTheme.headlineLarge,
+                textAlign: TextAlign.center,
+              ),
             ),
           ],
         ),
@@ -62,7 +65,7 @@ class AvatarBlock extends StatelessWidget {
                     Navigator.push(context, MaterialPageRoute(builder: (context) => ProfileScreen()));
                   },
                   child: CircleAvatar(radius: 35, backgroundImage: AssetImage('assets/avatar.png'))),
-              Text("2500", style: Theme.of(context).textTheme.headlineSmall,textAlign: TextAlign.center)
+              Text("2500", style: Theme.of(context).textTheme.headlineSmall, textAlign: TextAlign.center)
             ],
           ),
         ],

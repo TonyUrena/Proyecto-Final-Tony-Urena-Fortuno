@@ -1,11 +1,11 @@
-import 'package:cococuya_app/home_screen.dart';
-import 'package:cococuya_app/map_screen.dart';
-import 'package:cococuya_app/product.dart';
-import 'package:cococuya_app/store_screen.dart';
 import 'package:flutter/material.dart';
+import 'home_screen.dart'; // Asegúrate de importar HomeScreen
+import 'store_screen.dart'; // Asegúrate de importar StoreScreen
+import 'map_screen.dart'; // Asegúrate de importar MapScreen
+import 'product.dart'; // Asegúrate de importar Product
 
 class MenuScreen extends StatefulWidget {
-  const MenuScreen({super.key});
+  const MenuScreen({Key? key}) : super(key: key);
 
   @override
   State<MenuScreen> createState() => _MenuScreenState();
@@ -14,31 +14,38 @@ class MenuScreen extends StatefulWidget {
 class _MenuScreenState extends State<MenuScreen> {
   int _selectedIndex = 0;
 
-  final List<Widget> _screens = <Widget>[
-    const HomeScreen(),
-    StoreScreen(productList: [
-      Product(
-        imageUrl: 'assets/product00.jpg',
-        name: 'LABEL',
-        buyPrice: 100,
-        isGift: false,
-      ),
-      Product(
-        imageUrl: 'assets/product00.jpg',
-        name: 'LABEL',
-        buyPrice: 100,
-        isGift: false,
-      ),
-      Product(
-        imageUrl: 'assets/product00.jpg',
-        name: 'LABEL',
-        buyPrice: 100,
-        isGift: false,
-      ),]),
-    StoreScreen(productList: []),
-    StoreScreen(productList: []),
-    MapScreen(productList: [])
-  ];
+  late final List<Widget> _screens;
+
+  @override
+  void initState() {
+    super.initState();
+    _screens = <Widget>[
+      HomeScreen(selectTab: _onItemTapped),
+      StoreScreen(productList: [
+        Product(
+          imageUrl: 'assets/product00.jpg',
+          name: 'LABEL',
+          buyPrice: 100,
+          isGift: false,
+        ),
+        Product(
+          imageUrl: 'assets/product00.jpg',
+          name: 'LABEL',
+          buyPrice: 100,
+          isGift: false,
+        ),
+        Product(
+          imageUrl: 'assets/product00.jpg',
+          name: 'LABEL',
+          buyPrice: 100,
+          isGift: false,
+        ),
+      ]),
+      StoreScreen(productList: []),
+      StoreScreen(productList: []),
+      MapScreen(productList: [])
+    ];
+  }
 
   void _onItemTapped(int index) {
     setState(() {
@@ -60,8 +67,7 @@ class _MenuScreenState extends State<MenuScreen> {
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15),
-              child:
-              _screens.elementAt(_selectedIndex),
+              child: _screens.elementAt(_selectedIndex),
             ),
           ],
         ),
