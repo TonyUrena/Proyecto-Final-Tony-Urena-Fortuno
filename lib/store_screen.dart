@@ -1,6 +1,8 @@
 import 'package:cococuya_app/product.dart';
 import 'package:flutter/material.dart';
 
+import 'custom_widgets.dart';
+
 class StoreScreen extends StatefulWidget {
   List<Product> productList;
 
@@ -15,13 +17,7 @@ class _StoreScreenState extends State<StoreScreen> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text("¡Hola <USER>!"),
-            CircleAvatar(radius: 35),
-          ],
-        ),
+        AvatarBlock(),
         Expanded(
           child: GridView.count(
             childAspectRatio: 0.75,

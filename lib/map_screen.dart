@@ -16,13 +16,7 @@ class _MapScreenState extends State<MapScreen> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text("¡Hola <USER>!"),
-            CircleAvatar(radius: 35),
-          ],
-        ),
+        AvatarBlock(),
         Expanded(
           child: HomeCard(
             label: "Lista de locales",

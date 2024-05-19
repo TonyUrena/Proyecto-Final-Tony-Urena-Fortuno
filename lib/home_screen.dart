@@ -15,13 +15,7 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          const Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text("¡Hola <USER>!"),
-              CircleAvatar(radius: 35),
-            ],
-          ),
+          AvatarBlock(),
           HomeCard(
             imageUrl: 'assets/product00.jpg',
             label: 'LABEL',

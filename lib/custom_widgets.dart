@@ -36,3 +36,32 @@ class HomeCard extends StatelessWidget {
     );
   }
 }
+
+
+
+class AvatarBlock extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return          const Padding(
+      padding: EdgeInsets.symmetric(vertical: 10),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: [
+          Text("¡Hola <USER>!"),
+          Column(
+            children: [
+              CircleAvatar(
+                  radius: 35,
+                  backgroundImage: AssetImage('assets/avatar.png')
+              ),
+              Text("2500")
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
+
+}
