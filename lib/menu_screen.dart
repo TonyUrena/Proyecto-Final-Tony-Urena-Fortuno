@@ -1,4 +1,5 @@
 import 'package:cococuya_app/home_screen.dart';
+import 'package:cococuya_app/map_screen.dart';
 import 'package:cococuya_app/product.dart';
 import 'package:cococuya_app/store_screen.dart';
 import 'package:flutter/material.dart';
@@ -36,7 +37,7 @@ class _MenuScreenState extends State<MenuScreen> {
       ),]),
     StoreScreen(productList: []),
     StoreScreen(productList: []),
-    StoreScreen(productList: [])
+    MapScreen(productList: [])
   ];
 
   void _onItemTapped(int index) {
