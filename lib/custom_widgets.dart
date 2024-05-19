@@ -4,8 +4,10 @@ import 'package:flutter/material.dart';
 
 class HomeCard extends StatelessWidget {
   String label, imageUrl;
+  double? width, height;
+  bool isSquare;
 
-  HomeCard({super.key, required this.label, required this.imageUrl});
+  HomeCard({super.key, required this.label, required this.imageUrl, this.isSquare = true, this.height, this.width});
 
   @override
   Widget build(BuildContext context) {
@@ -17,13 +19,17 @@ class HomeCard extends StatelessWidget {
           children: [
             LayoutBuilder(
               builder: (BuildContext context, BoxConstraints constraints) {
+
                 // conseguimos el ancho disponible
-                double availableWidth = constraints.maxWidth;
+                if (isSquare) {
+                  width = constraints.maxWidth;
+                  height = constraints.maxWidth;
+                }
 
                 return Image.asset(
                   imageUrl,
-                  width: availableWidth,
-                  height: availableWidth,
+                  width: width,
+                  height: height,
                   fit: BoxFit.cover,
                 );
               },

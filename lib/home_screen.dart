@@ -19,6 +19,8 @@ class _HomeScreenState extends State<HomeScreen> {
           HomeCard(
             imageUrl: 'assets/home_cards_img_01.png',
             label: 'Pide ahora tu caja y llévate un regalo exclusivo',
+            isSquare: false,
+
           ),
           HomeCard(
             imageUrl: 'assets/home_cards_img_02.png',
@@ -28,6 +30,8 @@ class _HomeScreenState extends State<HomeScreen> {
           HomeCard(
             imageUrl: 'assets/map_placeholder.jpg',
             label: 'Ya estamos en más de 12.000 establecimientos',
+            isSquare: false,
+            height: 250,
           ),
           HomeCard(
             imageUrl: 'assets/home_cards_img_04.png',
@@ -37,6 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
           HomeCard(
             imageUrl: 'assets/home_cards_img_05.png',
             label: 'Celebra el fin de curso con Cococuyá y acumula puntos extra',
+            isSquare: false,
           ),
           HomeCard(
             imageUrl: 'assets/home_cards_img_02.png',
