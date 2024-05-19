@@ -50,13 +50,13 @@ class _MenuScreenState extends State<MenuScreen> {
         ),
         Product(
           imageUrl: 'assets/product04.jpg',
-          name: 'Botellas edición limitada',
+          name: 'Botellas limitadas',
           buyPrice: 100,
           isGift: false,
         ),
         Product(
           imageUrl: 'assets/product05.jpg',
-          name: 'Lata edición limitada',
+          name: 'Lata limitadas',
           buyPrice: 100,
           isGift: false,
         ),
@@ -82,13 +82,13 @@ class _MenuScreenState extends State<MenuScreen> {
         ),
         Product(
           imageUrl: 'assets/product04.jpg',
-          name: 'Botellas edición limitada',
+          name: 'Botellas limitadas',
           buyPrice: 100,
           isGift: false,
         ),
         Product(
           imageUrl: 'assets/product05.jpg',
-          name: 'Lata edición limitada',
+          name: 'Lata limitadas',
           buyPrice: 100,
           isGift: false,
         ),

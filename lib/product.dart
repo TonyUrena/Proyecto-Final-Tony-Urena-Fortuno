@@ -30,7 +30,8 @@ class Product extends StatelessWidget {
             );
           },
         ),
-        Text(name),
+        SizedBox(height: 8,),
+        Text(name,style: Theme.of(context).textTheme.labelMedium),
         isGift ? Text(giftPrice!.toString()) : Text(buyPrice!.toString())
       ],
     ));
