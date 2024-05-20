@@ -18,7 +18,7 @@ class _MapScreenState extends State<MapScreen> {
       padding: const EdgeInsets.all(15),
       child: Column(
         children: [
-          AvatarBlock("¿Dónde estamos?"),
+          TitleBlock("Donde encontrarnos"),
           Expanded(
             child: HomeCard(
               label: "Lista de locales",

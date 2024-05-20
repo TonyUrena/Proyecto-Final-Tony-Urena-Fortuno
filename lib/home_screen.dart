@@ -14,7 +14,7 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            AvatarBlock("¡Hola Francisco!"),
+            TitleBlock("¡Hola Francisco!"),
             GestureDetector(
               onTap: () {
                 selectTab(2);

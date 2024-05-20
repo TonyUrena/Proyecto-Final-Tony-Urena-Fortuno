@@ -1,4 +1,6 @@
+import 'package:cococuya_app/profile_screen.dart';
 import 'package:flutter/material.dart';
+import 'custom_widgets.dart';
 import 'home_screen.dart';
 import 'store_screen.dart';
 import 'map_screen.dart';
@@ -23,47 +25,45 @@ class _MenuScreenState extends State<MenuScreen> {
     _pageController = PageController(initialPage: _selectedIndex);
     _screens = <Widget>[
       HomeScreen(selectTab: _onItemTapped),
-      StoreScreen(
-          label:"Tus premios:",
-          productList: [
-            Product(
-              imageUrl: 'assets/product00.jpg',
-              name: 'Miniatura WH40k',
-              buyPrice: 100,
-              isGift: false,
-            ),
-            Product(
-              imageUrl: 'assets/product01.jpg',
-              name: 'Pato de goma',
-              buyPrice: 100,
-              isGift: false,
-            ),
-            Product(
-              imageUrl: 'assets/product02.jpg',
-              name: 'Nevera portátil',
-              buyPrice: 100,
-              isGift: false,
-            ),
-            Product(
-              imageUrl: 'assets/product03.jpg',
-              name: 'Funda isotérmica',
-              buyPrice: 100,
-              isGift: false,
-            ),
-            Product(
-              imageUrl: 'assets/product04.jpg',
-              name: 'Botellas limitadas',
-              buyPrice: 100,
-              isGift: false,
-            ),
-            Product(
-              imageUrl: 'assets/product05.jpg',
-              name: 'Lata limitadas',
-              buyPrice: 100,
-              isGift: false,
-            ),
-          ]),
-      StoreScreen(label:"Tu tienda:", productList: [
+      StoreScreen(label: "Tus premios:", productList: [
+        Product(
+          imageUrl: 'assets/product00.jpg',
+          name: 'Miniatura WH40k',
+          buyPrice: 100,
+          isGift: false,
+        ),
+        Product(
+          imageUrl: 'assets/product01.jpg',
+          name: 'Pato de goma',
+          buyPrice: 100,
+          isGift: false,
+        ),
+        Product(
+          imageUrl: 'assets/product02.jpg',
+          name: 'Nevera portátil',
+          buyPrice: 100,
+          isGift: false,
+        ),
+        Product(
+          imageUrl: 'assets/product03.jpg',
+          name: 'Funda isotérmica',
+          buyPrice: 100,
+          isGift: false,
+        ),
+        Product(
+          imageUrl: 'assets/product04.jpg',
+          name: 'Botellas limitadas',
+          buyPrice: 100,
+          isGift: false,
+        ),
+        Product(
+          imageUrl: 'assets/product05.jpg',
+          name: 'Lata limitadas',
+          buyPrice: 100,
+          isGift: false,
+        ),
+      ]),
+      StoreScreen(label: "Tu tienda:", productList: [
         Product(
           imageUrl: 'assets/product_green.png',
           name: 'Cococuyá Green',
@@ -101,12 +101,13 @@ class _MenuScreenState extends State<MenuScreen> {
           isGift: false,
         ),
       ]),
-      StoreScreen(label:"Tus ofertas:", productList: [Product(
-        imageUrl: 'assets/product_green.png',
-        name: 'Cococuyá Green',
-        buyPrice: 100,
-        isGift: false,
-      ),
+      StoreScreen(label: "Tus ofertas:", productList: [
+        Product(
+          imageUrl: 'assets/product_green.png',
+          name: 'Cococuyá Green',
+          buyPrice: 100,
+          isGift: false,
+        ),
         Product(
           imageUrl: 'assets/product_red.png',
           name: 'Cococuyá Red',
@@ -136,36 +137,89 @@ class _MenuScreenState extends State<MenuScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Stack(
-          children: [
+        child: Stack(children: [
           Image.asset(
-          'assets/background_gradient01.png',
-          fit: BoxFit.cover,
-          height: double.infinity,
-          width: double.infinity,
-        ),
-        PageView(
-          controller: _pageController,
-          onPageChanged: (index) {
-            setState(() {
-              _selectedIndex = index;
-            });
-          },
-          children: _screens,
-        )]),),
+            'assets/background_gradient01.png',
+            fit: BoxFit.cover,
+            height: double.infinity,
+            width: double.infinity,
+          ),
+          PageView(
+            controller: _pageController,
+            onPageChanged: (index) {
+              setState(() {
+                _selectedIndex = index;
+              });
+            },
+            children: _screens,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(15),
+            child: Align(
+              alignment: Alignment.centerRight,
+              child: Column(
+                children: [
+                  GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const ProfileScreen()));
+                      },
+                      child: const Hero(
+                          tag: "heroAvatar",
+                          child: CircleAvatar(
+                              radius: 35,
+                              backgroundImage: AssetImage('assets/avatar.png')))),
+                  Hero(
+                      tag: "heroPoints",
+                      child: Text("2500",
+                          style: Theme.of(context).textTheme.headlineSmall,
+                          textAlign: TextAlign.center))
+                ],
+              ),
+            ),
+          ),
+        ]),
+      ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-              icon: Icon(Icons.home_rounded), label: 'Inicio', activeIcon: Icon(Icons.home_rounded, color: Colors.pinkAccent,)),
+              icon: Icon(Icons.home_rounded),
+              label: 'Inicio',
+              activeIcon: Icon(
+                Icons.home_rounded,
+                color: Colors.pinkAccent,
+              )),
           BottomNavigationBarItem(
-              icon: Icon(Icons.card_giftcard_rounded), label: 'Premios', activeIcon: Icon(Icons.card_giftcard_rounded, color: Colors.deepOrange,)),
+              icon: Icon(Icons.card_giftcard_rounded),
+              label: 'Premios',
+              activeIcon: Icon(
+                Icons.card_giftcard_rounded,
+                color: Colors.deepOrange,
+              )),
           BottomNavigationBarItem(
-              icon: Icon(Icons.shopping_cart_rounded), label: 'Tienda', activeIcon: Icon(Icons.shopping_cart_rounded, color: Colors.cyan,)),
+              icon: Icon(Icons.shopping_cart_rounded),
+              label: 'Tienda',
+              activeIcon: Icon(
+                Icons.shopping_cart_rounded,
+                color: Colors.cyan,
+              )),
           BottomNavigationBarItem(
-              icon: Icon(Icons.discount_rounded), label: 'Ofertas', activeIcon: Icon(Icons.discount_rounded, color: Colors.green,)),
+              icon: Icon(Icons.discount_rounded),
+              label: 'Ofertas',
+              activeIcon: Icon(
+                Icons.discount_rounded,
+                color: Colors.green,
+              )),
           BottomNavigationBarItem(
-              icon: Icon(Icons.location_pin), label: 'Mapa', activeIcon: Icon(Icons.location_pin, color: Colors.red,)),
+              icon: Icon(Icons.location_pin),
+              label: 'Mapa',
+              activeIcon: Icon(
+                Icons.location_pin,
+                color: Colors.red,
+              )),
         ],
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,

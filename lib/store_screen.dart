@@ -16,19 +16,22 @@ class StoreScreen extends StatefulWidget {
 class _StoreScreenState extends State<StoreScreen> {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(15),
-      child: Column(
-        children: [
-          AvatarBlock(widget. label),
-          Expanded(
-            child: GridView.count(
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.all(15),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            TitleBlock(widget.label),
+            GridView.count(
+              shrinkWrap: true,
+              physics: NeverScrollableScrollPhysics(),
               childAspectRatio: 0.75,
               crossAxisCount: 2,
               children: widget.productList,
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

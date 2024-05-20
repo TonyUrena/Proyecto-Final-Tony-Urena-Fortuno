@@ -53,48 +53,22 @@ class HomeCard extends StatelessWidget {
   }
 }
 
-class AvatarBlock extends StatelessWidget {
+class TitleBlock extends StatelessWidget {
   String label;
 
-  AvatarBlock(this.label);
+  TitleBlock(this.label);
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(top: 20),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.end,
-        children: [
-          Text(label, style: Theme.of(context).textTheme.titleLarge),
-          Column(
-            children: [
-              //TODO Mantener el avatar fijo al hacer scroll
-              GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const ProfileScreen()));
-                  },
-                  child: const Hero(
-                      tag: "heroAvatar",
-                      child: CircleAvatar(
-                          radius: 35,
-                          backgroundImage: AssetImage('assets/avatar.png')))),
-              Hero(
-                  tag: "heroPoints",
-                  child: Text("2500",
-                      style: Theme.of(context).textTheme.headlineSmall,
-                      textAlign: TextAlign.center))
-            ],
-          ),
-        ],
-      ),
+    return SizedBox(
+      height: 90,
+      width: double.infinity,
+      child: Align(
+          alignment: Alignment.bottomLeft,
+          child: Text(label, style: Theme.of(context).textTheme.titleLarge)),
     );
   }
 }
-
 class DidYouKnowTextBlock extends StatelessWidget {
   String label;
 
