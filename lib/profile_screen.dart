@@ -29,8 +29,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   padding: EdgeInsets.symmetric(vertical: 20),
                   child: Column(
                     children: [
-                      CircleAvatar(radius: 55, backgroundImage: AssetImage('assets/avatar.png')),
-                      Text("2500", style: Theme.of(context).textTheme.titleLarge,),
+                      Hero(tag: "heroAvatar", child: CircleAvatar(radius: 55, backgroundImage: AssetImage('assets/avatar.png'))),
+                      Hero(tag: "heroPoints", child: Text("2500", style: Theme.of(context).textTheme.titleLarge,)),
                       SizedBox(height: 15,),
                       Text("Francisco Ramírez Pedregal", style: Theme.of(context).textTheme.headlineMedium, textAlign: TextAlign.center,),
                     ],

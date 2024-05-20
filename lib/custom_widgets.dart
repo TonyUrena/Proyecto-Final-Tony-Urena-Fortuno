@@ -7,7 +7,13 @@ class HomeCard extends StatelessWidget {
   double? width, height;
   bool isSquare;
 
-  HomeCard({super.key, required this.label, required this.imageUrl, this.isSquare = true, this.height, this.width});
+  HomeCard(
+      {super.key,
+      required this.label,
+      required this.imageUrl,
+      this.isSquare = true,
+      this.height,
+      this.width});
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +56,6 @@ class HomeCard extends StatelessWidget {
 class AvatarBlock extends StatelessWidget {
   String label;
 
-
   AvatarBlock(this.label);
 
   @override
@@ -67,10 +72,21 @@ class AvatarBlock extends StatelessWidget {
               //TODO Mantener el avatar fijo al hacer scroll
               GestureDetector(
                   onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => ProfileScreen()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const ProfileScreen()));
                   },
-                  child: CircleAvatar(radius: 35, backgroundImage: AssetImage('assets/avatar.png'))),
-              Text("2500", style: Theme.of(context).textTheme.headlineSmall, textAlign: TextAlign.center)
+                  child: const Hero(
+                      tag: "heroAvatar",
+                      child: CircleAvatar(
+                          radius: 35,
+                          backgroundImage: AssetImage('assets/avatar.png')))),
+              Hero(
+                  tag: "heroPoints",
+                  child: Text("2500",
+                      style: Theme.of(context).textTheme.headlineSmall,
+                      textAlign: TextAlign.center))
             ],
           ),
         ],
