@@ -1,6 +1,5 @@
 import 'package:cococuya_app/profile_screen.dart';
 import 'package:flutter/material.dart';
-import 'custom_widgets.dart';
 import 'home_screen.dart';
 import 'store_screen.dart';
 import 'map_screen.dart';

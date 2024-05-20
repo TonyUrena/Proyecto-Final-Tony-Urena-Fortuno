@@ -1,4 +1,3 @@
-import 'package:cococuya_app/profile_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

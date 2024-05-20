@@ -1,4 +1,3 @@
-import 'package:cococuya_app/custom_widgets.dart';
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatefulWidget {
