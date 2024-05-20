@@ -23,12 +23,15 @@ class _StoreScreenState extends State<StoreScreen> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             TitleBlock(widget.label),
-            GridView.count(
-              shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(),
-              childAspectRatio: 0.75,
-              crossAxisCount: 2,
-              children: widget.productList,
+            Padding(
+              padding: const EdgeInsets.only(top: 8.0),
+              child: GridView.count(mainAxisSpacing: 5, crossAxisSpacing: 5,
+                shrinkWrap: true,
+                physics: NeverScrollableScrollPhysics(),
+                childAspectRatio: 0.75,
+                crossAxisCount: 2,
+                children: widget.productList,
+              ),
             ),
           ],
         ),
