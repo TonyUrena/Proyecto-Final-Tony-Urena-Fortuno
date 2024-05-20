@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'home_screen.dart'; // Asegúrate de importar HomeScreen
-import 'store_screen.dart'; // Asegúrate de importar StoreScreen
-import 'map_screen.dart'; // Asegúrate de importar MapScreen
-import 'product.dart'; // Asegúrate de importar Product
+import 'home_screen.dart';
+import 'store_screen.dart';
+import 'map_screen.dart';
+import 'product.dart';
 
 class MenuScreen extends StatefulWidget {
   const MenuScreen({Key? key}) : super(key: key);
@@ -12,6 +12,7 @@ class MenuScreen extends StatefulWidget {
 }
 
 class _MenuScreenState extends State<MenuScreen> {
+  late final PageController _pageController;
   int _selectedIndex = 0;
 
   late final List<Widget> _screens;
@@ -19,48 +20,49 @@ class _MenuScreenState extends State<MenuScreen> {
   @override
   void initState() {
     super.initState();
+    _pageController = PageController(initialPage: _selectedIndex);
     _screens = <Widget>[
       HomeScreen(selectTab: _onItemTapped),
       StoreScreen(
           label:"Tus premios:",
           productList: [
-        Product(
-          imageUrl: 'assets/product00.jpg',
-          name: 'Miniatura WH40k',
-          buyPrice: 100,
-          isGift: false,
-        ),
-        Product(
-          imageUrl: 'assets/product01.jpg',
-          name: 'Pato de goma',
-          buyPrice: 100,
-          isGift: false,
-        ),
-        Product(
-          imageUrl: 'assets/product02.jpg',
-          name: 'Nevera portátil',
-          buyPrice: 100,
-          isGift: false,
-        ),
-        Product(
-          imageUrl: 'assets/product03.jpg',
-          name: 'Funda isotérmica',
-          buyPrice: 100,
-          isGift: false,
-        ),
-        Product(
-          imageUrl: 'assets/product04.jpg',
-          name: 'Botellas limitadas',
-          buyPrice: 100,
-          isGift: false,
-        ),
-        Product(
-          imageUrl: 'assets/product05.jpg',
-          name: 'Lata limitadas',
-          buyPrice: 100,
-          isGift: false,
-        ),
-      ]),
+            Product(
+              imageUrl: 'assets/product00.jpg',
+              name: 'Miniatura WH40k',
+              buyPrice: 100,
+              isGift: false,
+            ),
+            Product(
+              imageUrl: 'assets/product01.jpg',
+              name: 'Pato de goma',
+              buyPrice: 100,
+              isGift: false,
+            ),
+            Product(
+              imageUrl: 'assets/product02.jpg',
+              name: 'Nevera portátil',
+              buyPrice: 100,
+              isGift: false,
+            ),
+            Product(
+              imageUrl: 'assets/product03.jpg',
+              name: 'Funda isotérmica',
+              buyPrice: 100,
+              isGift: false,
+            ),
+            Product(
+              imageUrl: 'assets/product04.jpg',
+              name: 'Botellas limitadas',
+              buyPrice: 100,
+              isGift: false,
+            ),
+            Product(
+              imageUrl: 'assets/product05.jpg',
+              name: 'Lata limitadas',
+              buyPrice: 100,
+              isGift: false,
+            ),
+          ]),
       StoreScreen(label:"Tu tienda:", productList: [
         Product(
           imageUrl: 'assets/product_green.png',
@@ -123,9 +125,11 @@ class _MenuScreenState extends State<MenuScreen> {
   }
 
   void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
+    _pageController.animateToPage(
+      index,
+      duration: Duration(milliseconds: 200),
+      curve: Curves.easeInOut,
+    );
   }
 
   @override
@@ -134,19 +138,21 @@ class _MenuScreenState extends State<MenuScreen> {
       body: SafeArea(
         child: Stack(
           children: [
-            Image.asset(
-              'assets/background_gradient01.png',
-              fit: BoxFit.cover,
-              height: double.infinity,
-              width: double.infinity,
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15),
-              child: _screens.elementAt(_selectedIndex),
-            ),
-          ],
+          Image.asset(
+          'assets/background_gradient01.png',
+          fit: BoxFit.cover,
+          height: double.infinity,
+          width: double.infinity,
         ),
-      ),
+        PageView(
+          controller: _pageController,
+          onPageChanged: (index) {
+            setState(() {
+              _selectedIndex = index;
+            });
+          },
+          children: _screens,
+        )]),),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         items: const <BottomNavigationBarItem>[

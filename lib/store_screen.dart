@@ -16,17 +16,20 @@ class StoreScreen extends StatefulWidget {
 class _StoreScreenState extends State<StoreScreen> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        AvatarBlock(widget. label),
-        Expanded(
-          child: GridView.count(
-            childAspectRatio: 0.75,
-            crossAxisCount: 2,
-            children: widget.productList,
+    return Padding(
+      padding: const EdgeInsets.all(15),
+      child: Column(
+        children: [
+          AvatarBlock(widget. label),
+          Expanded(
+            child: GridView.count(
+              childAspectRatio: 0.75,
+              crossAxisCount: 2,
+              children: widget.productList,
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

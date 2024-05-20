@@ -14,16 +14,19 @@ class MapScreen extends StatefulWidget {
 class _MapScreenState extends State<MapScreen> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        AvatarBlock("¿Dónde estamos?"),
-        Expanded(
-          child: HomeCard(
-            label: "Lista de locales",
-            imageUrl: 'assets/map_placeholder.jpg',
-          )
-        ),
-      ],
+    return Padding(
+      padding: const EdgeInsets.all(15),
+      child: Column(
+        children: [
+          AvatarBlock("¿Dónde estamos?"),
+          Expanded(
+            child: HomeCard(
+              label: "Lista de locales",
+              imageUrl: 'assets/map_placeholder.jpg',
+            )
+          ),
+        ],
+      ),
     );
   }
 }
