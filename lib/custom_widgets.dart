@@ -20,6 +20,7 @@ class HomeCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8),
       child: Card(
+        elevation: 8,
         clipBehavior: Clip.antiAlias,
         child: Column(
           children: [

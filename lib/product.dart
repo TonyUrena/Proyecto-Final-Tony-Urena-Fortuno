@@ -14,26 +14,33 @@ class Product extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(clipBehavior: Clip.antiAlias,
+    return Card(
+        elevation: 8,
+        clipBehavior: Clip.antiAlias,
         child: Column(
-      children: [
-        LayoutBuilder(
-          builder: (BuildContext context, BoxConstraints constraints) {
-            // conseguimos el ancho disponible
-            double availableWidth = constraints.maxWidth;
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: LayoutBuilder(
+                builder: (BuildContext context, BoxConstraints constraints) {
+                  // conseguimos el ancho disponible
+                  double availableWidth = constraints.maxWidth;
 
-            return Image.asset(
-              imageUrl,
-              width: availableWidth,
-              height: availableWidth,
-              fit: BoxFit.cover,
-            );
-          },
-        ),
-        SizedBox(height: 8,),
-        Text(name,style: Theme.of(context).textTheme.labelMedium),
-        isGift ? Text(giftPrice!.toString()) : Text(buyPrice!.toString())
-      ],
-    ));
+                  return Image.asset(
+                    imageUrl,
+                    width: availableWidth,
+                    height: availableWidth,
+                    fit: BoxFit.cover,
+                  );
+                },
+              ),
+            ),
+            SizedBox(
+              height: 8,
+            ),
+            Text(name, style: Theme.of(context).textTheme.labelMedium),
+            isGift ? Text(giftPrice!.toString()) : Text(buyPrice!.toString())
+          ],
+        ));
   }
 }
