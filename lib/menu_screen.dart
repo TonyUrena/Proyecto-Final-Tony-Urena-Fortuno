@@ -83,6 +83,24 @@ class _MenuScreenState extends State<MenuScreen> {
           isGift: false,
         ),
         Product(
+          imageUrl: 'assets/product_green.png',
+          name: 'Cococuyá Green Pack 6',
+          buyPrice: 100,
+          isGift: false,
+        ),
+        Product(
+          imageUrl: 'assets/product_red.png',
+          name: 'Cococuyá Red Pack 6',
+          buyPrice: 100,
+          isGift: false,
+        ),
+        Product(
+          imageUrl: 'assets/product_black.png',
+          name: 'Cococuyá Black Pack 6',
+          buyPrice: 100,
+          isGift: false,
+        ),
+        Product(
           imageUrl: 'assets/product04.jpg',
           name: 'Botellas limitadas',
           buyPrice: 100,
@@ -119,7 +137,25 @@ class _MenuScreenState extends State<MenuScreen> {
           name: 'Cococuyá Black',
           buyPrice: 100,
           isGift: false,
-        )
+        ),
+        Product(
+          imageUrl: 'assets/product_green.png',
+          name: 'Cococuyá Green Pack 6',
+          buyPrice: 100,
+          isGift: false,
+        ),
+        Product(
+          imageUrl: 'assets/product_red.png',
+          name: 'Cococuyá Red Pack 6',
+          buyPrice: 100,
+          isGift: false,
+        ),
+        Product(
+          imageUrl: 'assets/product_black.png',
+          name: 'Cococuyá Black Pack 6',
+          buyPrice: 100,
+          isGift: false,
+        ),
       ]),
       MapScreen(productList: [])
     ];
