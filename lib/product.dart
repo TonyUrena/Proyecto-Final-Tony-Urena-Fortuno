@@ -41,8 +41,8 @@ class Product extends StatelessWidget {
                     height: 10,
                   ),
                   isGift
-                      ? Text('Precio de regalo: ${giftPrice.toString()}')
-                      : Text('Precio de compra: ${buyPrice.toString()}'),
+                      ? Text('${giftPrice.toString()}', style: TextStyle(fontSize: 22),)
+                      : Text('${buyPrice.toString()}',  style: TextStyle(fontSize: 22),),
                   SizedBox(height: 12),
                 ],
               ),
@@ -80,8 +80,8 @@ class Product extends StatelessWidget {
             SizedBox(height: 8),
             Text(name, style: Theme.of(context).textTheme.labelMedium),
             isGift
-                ? Text('Precio de regalo: ${giftPrice.toString()}')
-                : Text('Precio de compra: ${buyPrice.toString()}'),
+                ? Text('${giftPrice.toString()}', style: TextStyle(fontSize: 12),)
+                : Text('${buyPrice.toString()}',  style: TextStyle(fontSize: 12),),
           ],
         ),
       ),
