@@ -21,8 +21,8 @@ class MyApp extends StatelessWidget {
           headlineLarge: TextStyle(fontSize: 20, fontWeight: FontWeight.w900, color: Colors.pink.shade400),
           headlineMedium: TextStyle(fontSize: 30, fontWeight: FontWeight.w400, color: Colors.white),
           headlineSmall: TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: Colors.white),
-            labelSmall: TextStyle(fontSize: 28, fontWeight: FontWeight.w900, color: Colors.pink.shade400),
-        labelMedium: TextStyle(fontSize: 16, color: Colors.pink.shade400)),
+          labelSmall: TextStyle(fontSize: 28, fontWeight: FontWeight.w900, color: Colors.pink.shade400),
+          labelMedium: TextStyle(fontSize: 13, color: Colors.pink.shade400)),
       ),
       //Ruta inicial de la aplicación
       initialRoute: '/',
