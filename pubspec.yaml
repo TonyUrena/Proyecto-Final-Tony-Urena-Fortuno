@@ -59,7 +59,7 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/background_gradient01.png
+    - assets/background_gradient01.jpg
     - assets/bottle_red.png
     - assets/bottle_green.png
     - assets/bottle_black.png
@@ -69,18 +69,18 @@ flutter:
     - assets/product03.jpg
     - assets/product04.jpg
     - assets/product05.jpg
-    - assets/product_green.png
-    - assets/product_red.png
-    - assets/product_black.png
-    - assets/product_green_x6.png
-    - assets/product_red_x6.png
-    - assets/product_black_x6.png
+    - assets/product_green.jpg
+    - assets/product_red.jpg
+    - assets/product_black.jpg
+    - assets/product_green_x6.jpg
+    - assets/product_red_x6.jpg
+    - assets/product_black_x6.jpg
     - assets/map_placeholder.jpg
     - assets/avatar.png
-    - assets/home_cards_img_01.png
-    - assets/home_cards_img_02.png
-    - assets/home_cards_img_04.png
-    - assets/home_cards_img_05.png
+    - assets/home_cards_img_01.jpg
+    - assets/home_cards_img_02.jpg
+    - assets/home_cards_img_04.jpg
+    - assets/home_cards_img_05.jpg
     - assets/google_logo.png
 
   # An image asset can refer to one or more resolution-specific "variants", see

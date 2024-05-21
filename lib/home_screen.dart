@@ -20,7 +20,7 @@ class HomeScreen extends StatelessWidget {
                 selectTab(2);
               },
               child: HomeCard(
-                imageUrl: 'assets/home_cards_img_01.png',
+                imageUrl: 'assets/home_cards_img_01.jpg',
                 label: 'Pide ahora tu caja y llévate un regalo exclusivo',
                 isSquare: false,
               ),
@@ -30,7 +30,7 @@ class HomeScreen extends StatelessWidget {
                 selectTab(1);
               },
               child: HomeCard(
-                imageUrl: 'assets/home_cards_img_02.png',
+                imageUrl: 'assets/home_cards_img_02.jpg',
                 label: '¿Has visto los premios de esta temporada?',
               ),
             ),
@@ -51,7 +51,7 @@ class HomeScreen extends StatelessWidget {
                 selectTab(3);
               },
               child: HomeCard(
-                imageUrl: 'assets/home_cards_img_04.png',
+                imageUrl: 'assets/home_cards_img_04.jpg',
                 label: 'Ya es Black Friday en Cococuyá',
               ),
             ),
@@ -61,7 +61,7 @@ class HomeScreen extends StatelessWidget {
                 selectTab(2);
               },
               child: HomeCard(
-                imageUrl: 'assets/home_cards_img_05.png',
+                imageUrl: 'assets/home_cards_img_05.jpg',
                 label: 'Celebra el fin de curso con Cococuyá y acumula puntos extra',
                 isSquare: false,
               ),
@@ -71,7 +71,7 @@ class HomeScreen extends StatelessWidget {
                 selectTab(1);
               },
               child: HomeCard(
-                imageUrl: 'assets/home_cards_img_02.png',
+                imageUrl: 'assets/home_cards_img_02.jpg',
                 label: '¿Seguro que has visto los premios de esta temporada?',
               ),
             ),

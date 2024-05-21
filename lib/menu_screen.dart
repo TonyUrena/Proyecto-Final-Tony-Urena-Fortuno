@@ -64,37 +64,37 @@ class _MenuScreenState extends State<MenuScreen> {
       ]),
       StoreScreen(label: "Tu tienda:", productList: [
         Product(
-          imageUrl: 'assets/product_green.png',
+          imageUrl: 'assets/product_green.jpg',
           name: 'Cococuyá Green',
           buyPrice: 100,
           isGift: false,
         ),
         Product(
-          imageUrl: 'assets/product_red.png',
+          imageUrl: 'assets/product_red.jpg',
           name: 'Cococuyá Red',
           buyPrice: 100,
           isGift: false,
         ),
         Product(
-          imageUrl: 'assets/product_black.png',
+          imageUrl: 'assets/product_black.jpg',
           name: 'Cococuyá Black',
           buyPrice: 100,
           isGift: false,
         ),
         Product(
-          imageUrl: 'assets/product_green_x6.png',
+          imageUrl: 'assets/product_green_x6.jpg',
           name: 'Cococuyá Green Pack 6',
           buyPrice: 100,
           isGift: false,
         ),
         Product(
-          imageUrl: 'assets/product_red_x6.png',
+          imageUrl: 'assets/product_red_x6.jpg',
           name: 'Cococuyá Red Pack 6',
           buyPrice: 100,
           isGift: false,
         ),
         Product(
-          imageUrl: 'assets/product_black_x6.png',
+          imageUrl: 'assets/product_black_x6.jpg',
           name: 'Cococuyá Black Pack 6',
           buyPrice: 100,
           isGift: false,
@@ -120,19 +120,19 @@ class _MenuScreenState extends State<MenuScreen> {
       ]),
       StoreScreen(label: "Tus ofertas:", productList: [
         Product(
-          imageUrl: 'assets/product_green_x6.png',
+          imageUrl: 'assets/product_green_x6.jpg',
           name: 'Cococuyá Green Pack 6',
           buyPrice: 100,
           isGift: false,
         ),
         Product(
-          imageUrl: 'assets/product_red_x6.png',
+          imageUrl: 'assets/product_red_x6.jpg',
           name: 'Cococuyá Red Pack 6',
           buyPrice: 100,
           isGift: false,
         ),
         Product(
-          imageUrl: 'assets/product_black_x6.png',
+          imageUrl: 'assets/product_black_x6.jpg',
           name: 'Cococuyá Black Pack 6',
           buyPrice: 100,
           isGift: false,
@@ -156,7 +156,7 @@ class _MenuScreenState extends State<MenuScreen> {
       body: SafeArea(
         child: Stack(children: [
           Image.asset(
-            'assets/background_gradient01.png',
+            'assets/background_gradient01.jpg',
             fit: BoxFit.cover,
             height: double.infinity,
             width: double.infinity,

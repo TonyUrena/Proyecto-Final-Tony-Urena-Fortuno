@@ -58,7 +58,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
       body: Stack(
         children: [
           Image.asset(
-            'assets/background_gradient01.png',
+            'assets/background_gradient01.jpg',
             fit: BoxFit.cover,
             height: double.infinity,
             width: double.infinity,

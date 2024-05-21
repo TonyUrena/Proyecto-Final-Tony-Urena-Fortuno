@@ -27,7 +27,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         child: Stack(
           children: [
             Image.asset(
-              'assets/background_gradient01.png',
+              'assets/background_gradient01.jpg',
               fit: BoxFit.cover,
               height: double.infinity,
               width: double.infinity,
