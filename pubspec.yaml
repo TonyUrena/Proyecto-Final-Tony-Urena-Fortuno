@@ -72,6 +72,9 @@ flutter:
     - assets/product_green.png
     - assets/product_red.png
     - assets/product_black.png
+    - assets/product_green_x6.png
+    - assets/product_red_x6.png
+    - assets/product_black_x6.png
     - assets/map_placeholder.jpg
     - assets/avatar.png
     - assets/home_cards_img_01.png

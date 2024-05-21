@@ -82,19 +82,19 @@ class _MenuScreenState extends State<MenuScreen> {
           isGift: false,
         ),
         Product(
-          imageUrl: 'assets/product_green.png',
+          imageUrl: 'assets/product_green_x6.png',
           name: 'Cococuyá Green Pack 6',
           buyPrice: 100,
           isGift: false,
         ),
         Product(
-          imageUrl: 'assets/product_red.png',
+          imageUrl: 'assets/product_red_x6.png',
           name: 'Cococuyá Red Pack 6',
           buyPrice: 100,
           isGift: false,
         ),
         Product(
-          imageUrl: 'assets/product_black.png',
+          imageUrl: 'assets/product_black_x6.png',
           name: 'Cococuyá Black Pack 6',
           buyPrice: 100,
           isGift: false,
@@ -120,37 +120,19 @@ class _MenuScreenState extends State<MenuScreen> {
       ]),
       StoreScreen(label: "Tus ofertas:", productList: [
         Product(
-          imageUrl: 'assets/product_green.png',
-          name: 'Cococuyá Green',
-          buyPrice: 100,
-          isGift: false,
-        ),
-        Product(
-          imageUrl: 'assets/product_red.png',
-          name: 'Cococuyá Red',
-          buyPrice: 100,
-          isGift: false,
-        ),
-        Product(
-          imageUrl: 'assets/product_black.png',
-          name: 'Cococuyá Black',
-          buyPrice: 100,
-          isGift: false,
-        ),
-        Product(
-          imageUrl: 'assets/product_green.png',
+          imageUrl: 'assets/product_green_x6.png',
           name: 'Cococuyá Green Pack 6',
           buyPrice: 100,
           isGift: false,
         ),
         Product(
-          imageUrl: 'assets/product_red.png',
+          imageUrl: 'assets/product_red_x6.png',
           name: 'Cococuyá Red Pack 6',
           buyPrice: 100,
           isGift: false,
         ),
         Product(
-          imageUrl: 'assets/product_black.png',
+          imageUrl: 'assets/product_black_x6.png',
           name: 'Cococuyá Black Pack 6',
           buyPrice: 100,
           isGift: false,
