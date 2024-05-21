@@ -219,46 +219,41 @@ class _MenuScreenState extends State<MenuScreen> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
+        selectedItemColor: Color.fromRGBO(197, 19, 77, 1.0), // Color del texto seleccionado
+        unselectedItemColor: Color.fromRGBO(2, 115, 103, 0.5568627450980392), // Color del texto no seleccionado
+        selectedLabelStyle: TextStyle(color: Colors.black), // Estilo del texto seleccionado
+        unselectedLabelStyle: TextStyle(color: Colors.black.withOpacity(0.6)), // Estilo del texto no seleccionado
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-              icon: Icon(Icons.home_rounded),
-              label: 'Inicio',
-              activeIcon: Icon(
-                Icons.home_rounded,
-                color: Colors.pinkAccent,
-              )),
+            icon: Icon(Icons.home_rounded),
+            label: 'Inicio',
+            activeIcon: Icon(Icons.home_rounded),
+          ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.card_giftcard_rounded),
-              label: 'Premios',
-              activeIcon: Icon(
-                Icons.card_giftcard_rounded,
-                color: Colors.deepOrange,
-              )),
+            icon: Icon(Icons.card_giftcard_rounded),
+            label: 'Premios',
+            activeIcon: Icon(Icons.card_giftcard_rounded),
+          ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.shopping_cart_rounded),
-              label: 'Tienda',
-              activeIcon: Icon(
-                Icons.shopping_cart_rounded,
-                color: Colors.cyan,
-              )),
+            icon: Icon(Icons.shopping_cart_rounded),
+            label: 'Tienda',
+            activeIcon: Icon(Icons.shopping_cart_rounded),
+          ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.discount_rounded),
-              label: 'Ofertas',
-              activeIcon: Icon(
-                Icons.discount_rounded,
-                color: Colors.green,
-              )),
+            icon: Icon(Icons.discount_rounded),
+            label: 'Ofertas',
+            activeIcon: Icon(Icons.discount_rounded),
+          ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.location_pin),
-              label: 'Mapa',
-              activeIcon: Icon(
-                Icons.location_pin,
-                color: Colors.red,
-              )),
+            icon: Icon(Icons.location_pin),
+            label: 'Mapa',
+            activeIcon: Icon(Icons.location_pin),
+          ),
         ],
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
       ),
+
     );
   }
 }

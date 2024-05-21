@@ -2,6 +2,7 @@ import 'package:cococuya_app/menu_screen.dart';
 import 'package:cococuya_app/login_screen.dart';
 import 'package:cococuya_app/profile_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,6 +13,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: Color.fromRGBO(199, 19, 78, 1.0), // Cambia este color al que desees
+    ));
+
     return MaterialApp(
       theme: ThemeData(
         textTheme: TextTheme(
