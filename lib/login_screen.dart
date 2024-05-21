@@ -117,7 +117,13 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                       onPressed: () {
                         Navigator.pushReplacementNamed(context, '/home');
                       },
-                      child: const Text("Sign in with Google"),
+                      child: Row(mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Image.asset("assets/google_logo.png", height: 23),
+                          SizedBox(width: 12,),
+                          Text("Sign in with Google"),
+                        ],
+                      ),
                     ),
                   ],
                 ),
