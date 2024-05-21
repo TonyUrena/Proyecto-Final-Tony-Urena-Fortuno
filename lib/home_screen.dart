@@ -76,16 +76,16 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(80.0),
+              padding: const EdgeInsets.symmetric(vertical: 80.0),
               child: Column(
                 children: [
                   const Text(
-                    "Parece que has llegado al final",
-                    style: TextStyle(color: Colors.white),
+                    "Parece que has llegado al final...",
+                    style: TextStyle(color: Colors.white, fontSize: 16),
                   ),
                   const Text(
                     "¡Toma 100 puntos por la cara!",
-                    style: TextStyle(color: Colors.white),
+                    style: TextStyle(color: Colors.white, fontSize: 20),
                   ),
                   const SizedBox(
                     height: 25,
